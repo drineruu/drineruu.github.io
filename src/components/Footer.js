@@ -166,7 +166,7 @@ const Footer = () => {
             <p className='text-xs text-gray-500'>
               This portfolio is open source and available on{' '}
               <a
-                href='https://github.com/drineruu/driner-portfolio'
+                href='https://github.com/drineruu/drineruu.github.io'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-blue-400 hover:text-blue-300 transition-colors duration-200'

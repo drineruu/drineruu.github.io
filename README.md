@@ -38,8 +38,8 @@ Before running this project, make sure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/drineruu/driner-portfolio.git
-   cd driner-portfolio/portfolio-app
+   git clone https://github.com/drineruu/drineruu.github.io.git
+   cd drineruu.github.io/portfolio-app
    ```
 
 2. **Install dependencies**
@@ -83,4 +83,4 @@ Deploy manually using:
 npm run deploy
 ```
 
-The live site will be available at: `https://drineruu.github.io/driner-portfolio`
+The live site will be available at: `https://drineruu.github.io`
