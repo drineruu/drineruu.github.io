@@ -4,13 +4,13 @@ import {
   Bot,
   BookOpenText,
   Car,
-  Coffee,
   Bike,
   Code2,
   Heart,
+  Mountain,
+  Palette,
   Zap,
   Target,
-  Mountain,
 } from 'lucide-react';
 import ImageCarousel from './ImageCarousel';
 
@@ -22,8 +22,9 @@ const Personal = () => {
       description: (
         <>
           As one of Jehovah's Witnesses, I find joy in sharing the good news
-          with others and helping them discover hope through the Bible. Visit
-          our website at{' '}
+          with others and helping them discover hope through the Bible.
+          <br />
+          Visit our website at{' '}
           <a
             href='https://www.jw.org'
             target='_blank'
@@ -37,10 +38,25 @@ const Personal = () => {
       ),
     },
     {
-      icon: <Coffee size={24} />,
-      name: 'Cafe Hopping',
-      description:
-        'Always on the hunt for cozy spots and great coffee. Sometimes I even brew my own.',
+      icon: <Palette size={24} />,
+      name: 'Art and Ko-fi',
+      description: (
+        <>
+          I also do digital art. You will see some of my pieces in the carousel.
+          <br />
+          <br />
+          Tips, shop items, and commissions live on{' '}
+          <a
+            href='https://ko-fi.com/drineruu'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-blue-400 hover:text-blue-300 underline'
+          >
+            ko-fi.com/drineruu
+          </a>
+          .
+        </>
+      ),
     },
     {
       icon: <Mountain size={24} />,

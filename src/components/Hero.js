@@ -6,6 +6,16 @@ import Typewriter from 'typewriter-effect';
 import { codeSnippets } from '../data/codeSnippets';
 import ImageWithLoader from './ImageWithLoader';
 
+/** Left → right: softer behind headline, stronger toward the avatar / right side */
+const codeBackgroundMask = {
+  WebkitMaskImage:
+    'linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0,0,0,1) 100%)',
+  maskImage:
+    'linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0,0,0,1) 100%)',
+  WebkitMaskSize: '100% 100%',
+  maskSize: '100% 100%',
+};
+
 const Hero = () => {
   const scrollToAbout = () => {
     const element = document.querySelector('#about');
@@ -20,7 +30,10 @@ const Hero = () => {
       className='min-h-screen flex items-center justify-center relative overflow-hidden'
     >
       {/* Animated Code Background */}
-      <div className='absolute inset-0 opacity-20 pointer-events-none'>
+      <div
+        className='absolute inset-0 opacity-60 pointer-events-none'
+        style={codeBackgroundMask}
+      >
         <div className='relative w-full h-full'>
           {codeSnippets.map((snippet, index) => {
             const textSizes = [
@@ -72,7 +85,10 @@ const Hero = () => {
       </div>
 
       {/* Additional floating code elements with different speeds */}
-      <div className='absolute inset-0 opacity-5 pointer-events-none'>
+      <div
+        className='absolute inset-0 opacity-25 pointer-events-none'
+        style={codeBackgroundMask}
+      >
         <div className='relative w-full h-full'>
           {codeSnippets.slice(0, 15).map((snippet, index) => {
             const textSizes = [

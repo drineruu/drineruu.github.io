@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code, Database, Globe, Server } from 'lucide-react';
-import Image from '../assets/optimized-images/driner-prof/driner-prof-large.webp';
+import Image from '../assets/images/IMG_8575.JPG';
 import ImageWithLoader from './ImageWithLoader';
 
 const About = () => {

@@ -8,6 +8,7 @@ import image3 from '../assets/optimized-images/IMG_5645/IMG_5645.webp';
 import image4 from '../assets/optimized-images/IMG_9612/IMG_9612.webp';
 import image5 from '../assets/optimized-images/IMG_4986/IMG_4986.webp';
 import image6 from '../assets/optimized-images/IMG_5135/IMG_5135.webp';
+import artDriner from '../assets/images/carousel/art-driner.JPEG';
 
 // Static images array (moved outside component to prevent re-creation)
 const images = [
@@ -17,6 +18,7 @@ const images = [
   { src: image4, alt: 'Driner - Professional Photo 4' },
   { src: image5, alt: 'Driner - Professional Photo 5' },
   { src: image6, alt: 'Driner - Professional Photo 6' },
+  { src: artDriner, alt: 'Driner - Original artwork' },
 ];
 
 const ImageCarousel = () => {
