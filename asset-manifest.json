@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.99ff924b.css",
-    "main.js": "/static/js/main.0ba6223a.js",
+    "main.js": "/static/js/main.d0c8de6d.js",
     "static/js/453.6fd6f76a.chunk.js": "/static/js/453.6fd6f76a.chunk.js",
     "static/media/IMG_5645.webp": "/static/media/IMG_5645.170df7c2843eaeda751d.webp",
     "static/media/IMG_1797.webp": "/static/media/IMG_1797.c9cc7c412bd408039e65.webp",
@@ -15,11 +15,11 @@
     "static/media/driner-chibi-medium.webp": "/static/media/driner-chibi-medium.ca80151a5e229b29edd2.webp",
     "index.html": "/index.html",
     "main.99ff924b.css.map": "/static/css/main.99ff924b.css.map",
-    "main.0ba6223a.js.map": "/static/js/main.0ba6223a.js.map",
+    "main.d0c8de6d.js.map": "/static/js/main.d0c8de6d.js.map",
     "453.6fd6f76a.chunk.js.map": "/static/js/453.6fd6f76a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.99ff924b.css",
-    "static/js/main.0ba6223a.js"
+    "static/js/main.d0c8de6d.js"
   ]
 }
