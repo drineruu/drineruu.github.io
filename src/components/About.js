@@ -59,8 +59,8 @@ const About = () => {
               <p>
                 My name is{' '}
                 <span className='text-blue-400'>John Driner Familaran</span>.
-                I'm a passionate Full Stack Developer with over 2 years of
-                experience in building scalable web applications and creating
+                I'm a passionate Full Stack Software Engineer with over 2 years
+                of experience in building scalable web applications and creating
                 exceptional user experiences.
               </p>
               <p>
