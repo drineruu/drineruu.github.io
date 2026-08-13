@@ -125,7 +125,7 @@ const Resume = () => {
               <p className='text-gray-300'>Projects Completed</p>
             </div>
             <div className='card p-6 text-center'>
-              <div className='text-3xl font-bold text-blue-400 mb-2'>2+</div>
+              <div className='text-3xl font-bold text-blue-400 mb-2'>3+</div>
               <p className='text-gray-300'>Years Experience</p>
             </div>
             <div className='card p-6 text-center'>
