@@ -23,7 +23,7 @@ const About = () => {
     {
       icon: <Globe size={24} />,
       name: 'Tools',
-      tech: 'Git, Docker, AWS, Postman',
+      tech: 'Git, Docker, AWS, Google Workspace',
     },
   ];
 
@@ -83,6 +83,7 @@ const About = () => {
               </h4>
               <ul className='space-y-2 text-gray-300'>
                 <li>• Building scalable and maintainable backend systems</li>
+                <li>• Turning repetitive work into creative automated tools</li>
                 <li>• Exploring cloud technologies and DevOps practices</li>
                 <li>• Mentoring junior developers</li>
                 <li>• Staying updated with the latest tech trends</li>

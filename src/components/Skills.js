@@ -1,5 +1,13 @@
 import React from 'react';
-import { Code, Database, Globe, Server, Settings, Zap } from 'lucide-react';
+import {
+  Code,
+  Database,
+  FileSpreadsheet,
+  Globe,
+  Server,
+  Settings,
+  Zap,
+} from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
@@ -63,7 +71,17 @@ const Skills = () => {
         { name: 'Linux', level: 80 },
         { name: 'GitHub Actions', level: 75 },
         { name: 'AWS', level: 70 },
-        { name: '', level: 0 },
+      ],
+    },
+    {
+      title: 'Google Workspace & Automation',
+      icon: <FileSpreadsheet size={24} />,
+      skills: [
+        { name: 'Google Apps Script', level: 90 },
+        { name: 'Google Sheets / Excel', level: 90 },
+        { name: 'Google Forms', level: 90 },
+        { name: 'Google Docs', level: 85 },
+        { name: 'Google Calendar automation', level: 85 },
       ],
     },
   ];

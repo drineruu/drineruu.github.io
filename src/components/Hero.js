@@ -170,8 +170,8 @@ const Hero = () => {
 
               <p className='text-md text-gray-400 mb-6 max-w-2xl lg:max-w-none'>
                 I'm passionate about building scalable web applications and
-                designing scalable backend systems, improving performance, and
-                ensuring everything runs like clockwork.
+                robust backend systems, optimizing performance, and ensuring
+                everything runs like clockwork.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8'>
