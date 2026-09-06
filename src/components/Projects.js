@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Play } from 'lucide-react';
+import { ExternalLink, Github, Play, Sparkles } from 'lucide-react';
 
 // Served from /public so CRA's SVGR doesn't choke on undraw namespace tags
 const projectImg = file => `${process.env.PUBLIC_URL}/images/projects/${file}`;
@@ -58,6 +58,8 @@ const Projects = () => {
     },
   ];
 
+  const cardWidth = 'w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)]';
+
   return (
     <section id='projects' className='section-padding'>
       <div className='container-width'>
@@ -71,11 +73,11 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='flex flex-wrap justify-center gap-8'>
           {projects.map(project => (
             <div
               key={project.id}
-              className='card group hover:scale-105 transition-all duration-300'
+              className={`card group hover:scale-105 transition-all duration-300 ${cardWidth}`}
             >
               {/* Temporary sample snapshot */}
               <div className='h-48 bg-gray-800/80 rounded-t-lg flex items-center justify-center overflow-hidden border-b border-gray-700 p-6'>
@@ -147,6 +149,35 @@ const Projects = () => {
               </div>
             </div>
           ))}
+
+          {/* Coming soon / in the works */}
+          <div
+            className={`${cardWidth} rounded-lg border border-dashed border-blue-500/40 bg-gradient-to-br from-gray-800/40 to-blue-950/30 p-6 flex flex-col items-center justify-center text-center min-h-[28rem] hover:border-blue-400/60 transition-colors duration-300`}
+          >
+            <div className='mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-blue-500/10 text-blue-400'>
+              <Sparkles size={28} />
+            </div>
+            <p className='text-xs uppercase tracking-[0.2em] text-blue-400/80 mb-3'>
+              In the works
+            </p>
+            <h3 className='text-xl font-bold mb-3 text-gray-100'>
+              Something&apos;s brewing
+            </h3>
+            <p className='text-gray-400 text-sm leading-relaxed max-w-xs'>
+              New builds, automations, and experiments are on the desk. Check
+              back soon — or peek at what&apos;s already shipping on GitHub.
+            </p>
+            <div className='mt-6 flex flex-wrap justify-center gap-2'>
+              {['Ideas', 'Drafts', 'Shipping soon'].map(tag => (
+                <span
+                  key={tag}
+                  className='bg-blue-600/10 text-blue-300/80 px-2 py-1 rounded text-xs font-medium border border-blue-500/20'
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className='text-center mt-12'>

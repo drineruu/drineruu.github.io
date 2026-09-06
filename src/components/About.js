@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code, Database, Globe, Server } from 'lucide-react';
-import Image from '../assets/images/IMG_8575.JPG';
+import Image from '../assets/images/20250608_091844.JPEG';
 import ImageWithLoader from './ImageWithLoader';
 
 const About = () => {
