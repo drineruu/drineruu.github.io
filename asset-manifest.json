@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.2d43a9dc.css",
-    "main.js": "/static/js/main.7f834f0a.js",
+    "main.css": "/static/css/main.e007dd83.css",
+    "main.js": "/static/js/main.196983dc.js",
     "static/js/453.6fd6f76a.chunk.js": "/static/js/453.6fd6f76a.chunk.js",
-    "static/media/20250608_091844.JPEG": "/static/media/20250608_091844.133b0e892268aeff0fd9.JPEG",
+    "static/media/green_mountainer.JPEG": "/static/media/green_mountainer.3b31195a4f26c178c2b6.JPEG",
     "static/media/IMG_5645.webp": "/static/media/IMG_5645.170df7c2843eaeda751d.webp",
     "static/media/IMG_1797.webp": "/static/media/IMG_1797.c9cc7c412bd408039e65.webp",
     "static/media/IMG_9612.webp": "/static/media/IMG_9612.5520743c6c3a82c62f2e.webp",
@@ -14,12 +14,12 @@
     "static/media/IMG_5125.webp": "/static/media/IMG_5125.19be4ce8b37cb7080fc7.webp",
     "static/media/driner-chibi-medium.webp": "/static/media/driner-chibi-medium.ca80151a5e229b29edd2.webp",
     "index.html": "/index.html",
-    "main.2d43a9dc.css.map": "/static/css/main.2d43a9dc.css.map",
-    "main.7f834f0a.js.map": "/static/js/main.7f834f0a.js.map",
+    "main.e007dd83.css.map": "/static/css/main.e007dd83.css.map",
+    "main.196983dc.js.map": "/static/js/main.196983dc.js.map",
     "453.6fd6f76a.chunk.js.map": "/static/js/453.6fd6f76a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d43a9dc.css",
-    "static/js/main.7f834f0a.js"
+    "static/css/main.e007dd83.css",
+    "static/js/main.196983dc.js"
   ]
 }
