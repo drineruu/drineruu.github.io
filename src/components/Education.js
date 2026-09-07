@@ -58,12 +58,12 @@ const Education = () => {
       date: '2022',
       credentialId: 'BCDxBGOxCDO',
       verifyUrl: '',
-      logo: 'bg-gradient-to-br from-blue-500 to-indigo-600',
+      logo: 'bg-gradient-to-br from-primary-500 to-primary-800',
     },
   ];
 
   return (
-    <section id='education' className='section-padding bg-gray-800/50'>
+    <section id='education' className='section-padding bg-surface-800/50'>
       <div className='container-width'>
         <div className='text-center mb-16'>
           <h2 className='text-3xl md:text-4xl font-bold mb-4'>
@@ -76,7 +76,7 @@ const Education = () => {
 
         {/* Education */}
         <div className='max-w-4xl mx-auto mb-20'>
-          <h3 className='text-2xl font-bold mb-8 text-blue-400 text-center'>
+          <h3 className='text-2xl font-bold mb-8 text-primary-400 text-center'>
             Education
           </h3>
 
@@ -84,7 +84,7 @@ const Education = () => {
             {education.map((edu, index) => (
               <div key={index} className='card p-6'>
                 <div className='flex items-start'>
-                  <div className='bg-blue-600 p-3 rounded-lg mr-4 flex-shrink-0'>
+                  <div className='bg-primary-600 p-3 rounded-lg mr-4 flex-shrink-0'>
                     <GraduationCap size={24} className='text-white' />
                   </div>
 
@@ -94,7 +94,7 @@ const Education = () => {
                         <h4 className='text-xl font-bold text-white mb-1'>
                           {edu.degree}
                         </h4>
-                        <p className='text-blue-400 font-medium'>
+                        <p className='text-primary-400 font-medium'>
                           {edu.institution}
                         </p>
                         <p className='text-gray-400 text-sm'>{edu.location}</p>
@@ -118,7 +118,7 @@ const Education = () => {
                         {edu.relevant.map((course, idx) => (
                           <span
                             key={idx}
-                            className='bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs'
+                            className='bg-surface-700 text-gray-300 px-2 py-1 rounded text-xs'
                           >
                             {course}
                           </span>
@@ -134,7 +134,7 @@ const Education = () => {
 
         {/* Certifications */}
         <div className='max-w-6xl mx-auto'>
-          <h3 className='text-2xl font-bold mb-8 text-blue-400 text-center'>
+          <h3 className='text-2xl font-bold mb-8 text-primary-400 text-center'>
             Professional Certifications
           </h3>
 
@@ -155,7 +155,7 @@ const Education = () => {
                     <h4 className='text-lg font-bold text-white mb-1'>
                       {cert.name}
                     </h4>
-                    <p className='text-blue-400 text-sm font-medium'>
+                    <p className='text-primary-400 text-sm font-medium'>
                       {cert.issuer}
                     </p>
                   </div>
@@ -175,7 +175,7 @@ const Education = () => {
                   href={cert.verifyUrl}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-200'
+                  className='inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 text-sm font-medium transition-colors duration-200'
                 >
                   <ExternalLink size={16} />
                   Verify Certificate

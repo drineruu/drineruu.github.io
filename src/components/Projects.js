@@ -80,7 +80,7 @@ const Projects = () => {
               className={`card group hover:scale-105 transition-all duration-300 ${cardWidth}`}
             >
               {/* Temporary sample snapshot */}
-              <div className='h-48 bg-gray-800/80 rounded-t-lg flex items-center justify-center overflow-hidden border-b border-gray-700 p-6'>
+              <div className='h-48 bg-surface-800/80 rounded-t-lg flex items-center justify-center overflow-hidden border-b border-surface-600 p-6'>
                 <img
                   src={project.image}
                   alt={`${project.title} preview`}
@@ -89,7 +89,7 @@ const Projects = () => {
               </div>
 
               <div className='p-6'>
-                <h3 className='text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors'>
+                <h3 className='text-xl font-bold mb-3 group-hover:text-primary-400 transition-colors'>
                   {project.title}
                 </h3>
 
@@ -103,7 +103,7 @@ const Projects = () => {
                     {project.technologies.map((tech, index) => (
                       <span
                         key={index}
-                        className='bg-blue-600/20 text-blue-300 px-2 py-1 rounded text-xs font-medium'
+                        className='bg-primary-600/20 text-primary-300 px-2 py-1 rounded text-xs font-medium'
                       >
                         {tech}
                       </span>
@@ -127,7 +127,7 @@ const Projects = () => {
                         href={project.demoUrl}
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded text-sm font-medium transition-colors duration-200'
+                        className='flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-3 py-2 rounded text-sm font-medium transition-colors duration-200'
                       >
                         <Play size={16} />
                         Demo
@@ -138,7 +138,7 @@ const Projects = () => {
                         href={project.githubUrl}
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded text-sm font-medium transition-colors duration-200'
+                        className='flex items-center gap-2 bg-surface-700 hover:bg-surface-600 text-white px-3 py-2 rounded text-sm font-medium transition-colors duration-200'
                       >
                         <Github size={16} />
                         Code
@@ -152,12 +152,12 @@ const Projects = () => {
 
           {/* Coming soon / in the works */}
           <div
-            className={`${cardWidth} rounded-lg border border-dashed border-blue-500/40 bg-gradient-to-br from-gray-800/40 to-blue-950/30 p-6 flex flex-col items-center justify-center text-center min-h-[28rem] hover:border-blue-400/60 transition-colors duration-300`}
+            className={`${cardWidth} rounded-lg border border-dashed border-primary-500/40 bg-gradient-to-br from-surface-800/40 to-primary-950/40 p-6 flex flex-col items-center justify-center text-center min-h-[28rem] hover:border-primary-400/60 transition-colors duration-300`}
           >
-            <div className='mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-blue-500/10 text-blue-400'>
+            <div className='mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-primary-500/10 text-primary-400'>
               <Sparkles size={28} />
             </div>
-            <p className='text-xs uppercase tracking-[0.2em] text-blue-400/80 mb-3'>
+            <p className='text-xs uppercase tracking-[0.2em] text-primary-400/80 mb-3'>
               In the works
             </p>
             <h3 className='text-xl font-bold mb-3 text-gray-100'>
@@ -171,7 +171,7 @@ const Projects = () => {
               {['Ideas', 'Drafts', 'Shipping soon'].map(tag => (
                 <span
                   key={tag}
-                  className='bg-blue-600/10 text-blue-300/80 px-2 py-1 rounded text-xs font-medium border border-blue-500/20'
+                  className='bg-primary-600/10 text-primary-300/80 px-2 py-1 rounded text-xs font-medium border border-primary-500/20'
                 >
                   {tag}
                 </span>

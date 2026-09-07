@@ -45,13 +45,13 @@ const Hero = () => {
               'text-2xl',
             ];
             const colors = [
-              'text-blue-600',
-              'text-green-600',
-              'text-purple-600',
-              'text-cyan-600',
-              'text-pink-600',
-              'text-yellow-600',
-              'text-indigo-600',
+              'text-primary-300',
+              'text-primary-400',
+              'text-primary-500',
+              'text-primary-600',
+              'text-emerald-500',
+              'text-lime-600',
+              'text-primary-700',
               'text-emerald-600',
             ];
             const animations = [
@@ -99,14 +99,14 @@ const Hero = () => {
               'text-xl',
             ];
             const colors = [
-              'text-purple-400',
-              'text-orange-400',
-              'text-teal-400',
-              'text-rose-400',
-              'text-amber-400',
+              'text-primary-300',
+              'text-primary-400',
+              'text-emerald-400',
               'text-lime-400',
-              'text-violet-400',
-              'text-sky-400',
+              'text-primary-500',
+              'text-teal-500',
+              'text-primary-200',
+              'text-emerald-300',
             ];
             const slowAnimations = [
               'animate-float-diagonal-slow',
@@ -144,7 +144,7 @@ const Hero = () => {
           <div className='flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 max-w-6xl mx-auto'>
             {/* Left Column - Text Content */}
             <div className='flex-1 text-center lg:text-left'>
-              <h1 className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
+              <h1 className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-primary-300 bg-clip-text text-transparent'>
                 Hi, I'm Driner
               </h1>
 
@@ -154,7 +154,7 @@ const Hero = () => {
 
               <div className='text-lg text-gray-400 mb-2 flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-2'>
                 <span>Grabs a cup of coffee.</span>
-                <div className='text-blue-400 font-semibold'>
+                <div className='text-primary-400 font-semibold'>
                   <Typewriter
                     options={{
                       strings: ['Inhale.', 'Exhale.', 'Code.'],
@@ -219,8 +219,8 @@ const Hero = () => {
             {/* Right Column - Profile Image with Flip Animation */}
             <div className='flex-shrink-0 order-first lg:order-last'>
               <div className='w-64 h-64 lg:w-80 lg:h-80 relative'>
-                <div className='absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full p-1 flip-container'>
-                  <div className='flip-inner bg-gray-900 rounded-full'>
+                <div className='absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-700 rounded-full p-1 flip-container'>
+                  <div className='flip-inner bg-surface-900 rounded-full'>
                     {/* Front face */}
                     <div className='flip-front'>
                       <ImageWithLoader

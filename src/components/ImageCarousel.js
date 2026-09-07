@@ -79,7 +79,7 @@ const ImageCarousel = () => {
                 alt={image.alt}
                 loading={index === 0 ? 'eager' : 'lazy'}
                 className='w-full h-full'
-                imgClassName='border-4 border-blue-500/20'
+                imgClassName='border-4 border-primary-500/20'
                 onError={e => {
                   console.error(
                     `Image ${index + 1} failed to load:`,

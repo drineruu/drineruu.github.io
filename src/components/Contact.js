@@ -95,7 +95,7 @@ const Contact = () => {
       icon: <Linkedin size={24} />,
       name: 'LinkedIn',
       url: 'https://linkedin.com/in/jnerfamilaran',
-      color: 'hover:text-blue-400',
+      color: 'hover:text-primary-400',
     },
     {
       icon: <Instagram size={24} />,
@@ -119,7 +119,7 @@ const Contact = () => {
         <div className='grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto'>
           {/* Contact Information */}
           <div>
-            <h3 className='text-2xl font-bold mb-8 text-blue-400'>
+            <h3 className='text-2xl font-bold mb-8 text-primary-400'>
               Let's Connect
             </h3>
 
@@ -130,7 +130,7 @@ const Contact = () => {
                   href={info.link}
                   className='flex items-center p-4 card hover:scale-105 transition-all duration-300 group'
                 >
-                  <div className='text-blue-400 mr-4 group-hover:scale-110 transition-transform duration-300'>
+                  <div className='text-primary-400 mr-4 group-hover:scale-110 transition-transform duration-300'>
                     {info.icon}
                   </div>
                   <div>
@@ -147,7 +147,7 @@ const Contact = () => {
 
             {/* Social Media Links */}
             <div>
-              <h4 className='text-xl font-semibold mb-6 text-blue-400'>
+              <h4 className='text-xl font-semibold mb-6 text-primary-400'>
                 Follow Me
               </h4>
               <div className='flex space-x-4'>
@@ -157,7 +157,7 @@ const Contact = () => {
                     href={social.url}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className={`p-3 bg-gray-700 rounded-lg text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 hover:bg-gray-600`}
+                    className={`p-3 bg-surface-700 rounded-lg text-gray-400 ${social.color} transition-all duration-300 hover:scale-110 hover:bg-surface-600`}
                     title={social.name}
                   >
                     {social.icon}
@@ -185,7 +185,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div>
-            <h3 className='text-2xl font-bold mb-8 text-blue-400'>
+            <h3 className='text-2xl font-bold mb-8 text-primary-400'>
               Send Message
             </h3>
 
@@ -205,7 +205,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white transition-colors duration-200'
+                    className='w-full px-4 py-3 bg-surface-700 border border-surface-500 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-white transition-colors duration-200'
                     placeholder='Your Name'
                   />
                 </div>
@@ -223,7 +223,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white transition-colors duration-200'
+                    className='w-full px-4 py-3 bg-surface-700 border border-surface-500 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-white transition-colors duration-200'
                     placeholder='your.email@example.com'
                   />
                 </div>
@@ -243,7 +243,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white transition-colors duration-200'
+                  className='w-full px-4 py-3 bg-surface-700 border border-surface-500 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-white transition-colors duration-200'
                   placeholder='Project Inquiry / Job Opportunity / General Question'
                 />
               </div>
@@ -262,7 +262,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white transition-colors duration-200 resize-vertical'
+                  className='w-full px-4 py-3 bg-surface-700 border border-surface-500 rounded-lg focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-white transition-colors duration-200 resize-vertical'
                   placeholder='Tell me about your project or how I can help you...'
                 ></textarea>
               </div>
@@ -290,8 +290,8 @@ const Contact = () => {
                 disabled={isSubmitting}
                 className={`w-full font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 ${
                   isSubmitting
-                    ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
-                    : 'bg-blue-600 hover:bg-blue-700 text-white'
+                    ? 'bg-surface-600 text-gray-400 cursor-not-allowed'
+                    : 'bg-primary-600 hover:bg-primary-700 text-white'
                 }`}
               >
                 {isSubmitting ? (

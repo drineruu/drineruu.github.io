@@ -87,7 +87,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id='skills' className='section-padding bg-gray-800/50'>
+    <section id='skills' className='section-padding bg-surface-800/50'>
       <div className='container-width'>
         <div className='text-center mb-16'>
           <h2 className='text-3xl md:text-4xl font-bold mb-4'>
@@ -100,7 +100,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div key={index} className='card p-6'>
               <div className='flex items-center mb-6'>
-                <div className='text-blue-400 mr-3'>{category.icon}</div>
+                <div className='text-primary-400 mr-3'>{category.icon}</div>
                 <h3 className='text-xl font-bold'>{category.title}</h3>
               </div>
 
@@ -115,9 +115,9 @@ const Skills = () => {
                         {skill.level}%
                       </span>
                     </div>
-                    <div className='w-full bg-gray-700 rounded-full h-2'>
+                    <div className='w-full bg-surface-700 rounded-full h-2'>
                       <div
-                        className='h-2 rounded-full bg-blue-500 transition-all duration-1000'
+                        className='h-2 rounded-full bg-primary-500 transition-all duration-1000'
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>

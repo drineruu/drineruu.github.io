@@ -9,7 +9,7 @@ const ImageWithLoader = ({ src, alt, className = '', ...props }) => {
       style={{ minHeight: '1px' }}
     >
       {!loaded && (
-        <div className='absolute inset-0 flex items-center justify-center z-20 text-blue-500'>
+        <div className='absolute inset-0 flex items-center justify-center z-20 text-primary-500'>
           {/* SVG Loader */}
           <svg
             xmlns='http://www.w3.org/2000/svg'

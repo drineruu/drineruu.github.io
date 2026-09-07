@@ -34,7 +34,7 @@ const Header = () => {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg'
+          ? 'bg-surface-900/95 backdrop-blur-sm shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -42,7 +42,7 @@ const Header = () => {
         <div className='flex items-center justify-between h-16'>
           <div className='flex-shrink-0'>
             <h1 className='ml-10 text-xl font-bold text-white'>
-              <span className='text-blue-400'>Dry's</span> Portfolio
+              <span className='text-primary-400'>Dry's</span> Portfolio
             </h1>
           </div>
 
@@ -75,7 +75,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className='md:hidden'>
-            <div className='px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2'>
+            <div className='px-2 pt-2 pb-3 space-y-1 bg-surface-900/95 backdrop-blur-sm rounded-lg mt-2'>
               {navigation.map(item => (
                 <button
                   key={item.name}

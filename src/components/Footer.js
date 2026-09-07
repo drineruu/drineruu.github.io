@@ -33,7 +33,7 @@ const Footer = () => {
       icon: <Linkedin size={20} />,
       name: 'LinkedIn',
       url: 'https://linkedin.com/in/jnerfamilaran',
-      color: 'hover:text-blue-400',
+      color: 'hover:text-primary-400',
     },
     {
       icon: <Instagram size={20} />,
@@ -59,7 +59,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className='bg-gray-900 border-t border-gray-800'>
+    <footer className='bg-surface-900 border-t border-surface-600'>
       <div className='container-width'>
         {/* Main Footer Content */}
         <div className='py-12 px-6'>
@@ -127,11 +127,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className='py-6 border-t border-gray-800'>
+        <div className='py-6 border-t border-surface-600'>
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <div className='flex items-center text-gray-400 text-sm mb-4 md:mb-0'>
               <span>© {currentYear} Driner • </span>
-              <Coffee size={16} className='mx-2 text-blue-400 fill-current' />
+              <Coffee
+                size={16}
+                className='mx-2 text-primary-400 fill-current'
+              />
             </div>
 
             <div className='flex items-center space-x-6'>
@@ -151,7 +154,7 @@ const Footer = () => {
               {/* Back to Top Button */}
               <button
                 onClick={scrollToTop}
-                className='bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full transition-colors duration-200'
+                className='bg-primary-600 hover:bg-primary-700 text-white p-2 rounded-full transition-colors duration-200'
                 title='Back to top'
               >
                 <ArrowUp size={16} />
@@ -161,19 +164,10 @@ const Footer = () => {
         </div>
 
         {/* Additional Footer Info */}
-        <div className='py-4 border-t border-gray-800'>
+        <div className='py-4 border-t border-surface-600'>
           <div className='text-center'>
             <p className='text-xs text-gray-500'>
-              This portfolio is open source and available on{' '}
-              <a
-                href='https://github.com/drineruu/drineruu.github.io'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='text-blue-400 hover:text-blue-300 transition-colors duration-200'
-              >
-                GitHub
-              </a>
-              . Built with React, Tailwind CSS, and deployed on GitHub Pages.
+              Built with React, Tailwind CSS, and deployed on GitHub Pages.
             </p>
           </div>
         </div>

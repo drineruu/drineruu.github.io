@@ -64,7 +64,7 @@ const Resume = () => {
 
         {/* Work Experience */}
         <div className='max-w-4xl mx-auto'>
-          <h3 className='text-2xl font-bold mb-8 text-blue-400 text-center'>
+          <h3 className='text-2xl font-bold mb-8 text-primary-400 text-center'>
             Work Experience
           </h3>
 
@@ -72,7 +72,7 @@ const Resume = () => {
             {workExperience.map((job, index) => (
               <div key={index} className='card p-6 relative'>
                 {/* Timeline dot */}
-                <div className='absolute -left-4 top-8 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center'>
+                <div className='absolute -left-4 top-8 w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center'>
                   <Briefcase size={16} className='text-white' />
                 </div>
 
@@ -82,7 +82,9 @@ const Resume = () => {
                       <h4 className='text-xl font-bold text-white mb-1'>
                         {job.title}
                       </h4>
-                      <p className='text-blue-400 font-medium'>{job.company}</p>
+                      <p className='text-primary-400 font-medium'>
+                        {job.company}
+                      </p>
                     </div>
                     <div className='flex flex-col md:items-end mt-2 md:mt-0'>
                       <div className='flex items-center text-gray-400 mb-1'>
@@ -102,7 +104,7 @@ const Resume = () => {
                         key={idx}
                         className='text-gray-300 text-sm flex items-start'
                       >
-                        <span className='text-blue-400 mr-2 mt-1'>•</span>
+                        <span className='text-primary-400 mr-2 mt-1'>•</span>
                         {responsibility}
                       </li>
                     ))}
@@ -115,21 +117,23 @@ const Resume = () => {
 
         {/* Key Achievements */}
         <div className='mt-16 max-w-4xl mx-auto'>
-          <h3 className='text-2xl font-bold mb-8 text-blue-400 text-center'>
+          <h3 className='text-2xl font-bold mb-8 text-primary-400 text-center'>
             Key Achievements
           </h3>
 
           <div className='grid md:grid-cols-3 gap-6'>
             <div className='card p-6 text-center'>
-              <div className='text-3xl font-bold text-blue-400 mb-2'>5+</div>
+              <div className='text-3xl font-bold text-primary-400 mb-2'>5+</div>
               <p className='text-gray-300'>Projects Completed</p>
             </div>
             <div className='card p-6 text-center'>
-              <div className='text-3xl font-bold text-blue-400 mb-2'>3+</div>
+              <div className='text-3xl font-bold text-primary-400 mb-2'>3+</div>
               <p className='text-gray-300'>Years Experience</p>
             </div>
             <div className='card p-6 text-center'>
-              <div className='text-3xl font-bold text-blue-400 mb-2'>80%</div>
+              <div className='text-3xl font-bold text-primary-400 mb-2'>
+                80%
+              </div>
               <p className='text-gray-300'>Performance Improvement</p>
             </div>
           </div>

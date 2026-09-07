@@ -19,7 +19,7 @@ const Testimonials = () => {
       name: 'Michael Chen',
       role: 'CTO',
       company: 'Digital Solutions Co.',
-      image: 'bg-gradient-to-br from-blue-400 to-indigo-500',
+      image: 'bg-gradient-to-br from-primary-400 to-primary-600',
       rating: 5,
       text: "I've worked with many developers, but [Driner] stands out for their problem-solving skills and ability to translate complex requirements into elegant solutions. Highly recommend for any full-stack development project.",
       linkedinUrl: 'https://linkedin.com/in/michaelchen',
@@ -41,7 +41,7 @@ const Testimonials = () => {
       name: 'David Kim',
       role: 'Startup Founder',
       company: 'InnovateLab',
-      image: 'bg-gradient-to-br from-purple-400 to-pink-500',
+      image: 'bg-gradient-to-br from-primary-300 to-primary-500',
       rating: 5,
       text: 'As a non-technical founder, I needed someone who could not only code but also guide me through technical decisions. [Driner] was instrumental in bringing our MVP to life and setting up our tech infrastructure.',
       linkedinUrl: 'https://linkedin.com/in/davidkim',
@@ -63,7 +63,7 @@ const Testimonials = () => {
       name: 'James Wilson',
       role: 'Senior Developer',
       company: 'Code Masters',
-      image: 'bg-gradient-to-br from-cyan-400 to-blue-500',
+      image: 'bg-gradient-to-br from-primary-300 to-primary-600',
       rating: 5,
       text: "I had the pleasure of collaborating with [Driner] on a complex project. Their code is clean, well-documented, and follows best practices. A true professional who I'd love to work with again.",
       linkedinUrl: 'https://linkedin.com/in/jameswilson',
@@ -84,7 +84,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section id='testimonials' className='section-padding bg-gray-800/50'>
+    <section id='testimonials' className='section-padding bg-surface-800/50'>
       <div className='container-width'>
         <div className='text-center mb-16'>
           <h2 className='text-3xl md:text-4xl font-bold mb-4'>
@@ -103,7 +103,7 @@ const Testimonials = () => {
               className='card p-6 relative hover:scale-105 transition-all duration-300'
             >
               {/* Quote Icon */}
-              <div className='absolute top-4 right-4 text-blue-400/20'>
+              <div className='absolute top-4 right-4 text-primary-400/20'>
                 <Quote size={32} />
               </div>
 
@@ -122,13 +122,13 @@ const Testimonials = () => {
 
               {/* Project Reference */}
               <div className='mb-4'>
-                <span className='bg-blue-600/20 text-blue-300 px-2 py-1 rounded text-xs font-medium'>
+                <span className='bg-primary-600/20 text-primary-300 px-2 py-1 rounded text-xs font-medium'>
                   Project: {testimonial.project}
                 </span>
               </div>
 
               {/* Client Info */}
-              <div className='flex items-center justify-between pt-4 border-t border-gray-700'>
+              <div className='flex items-center justify-between pt-4 border-t border-surface-600'>
                 <div className='flex items-center'>
                   <div
                     className={`w-12 h-12 ${testimonial.image} rounded-full mr-4 flex items-center justify-center`}
@@ -145,7 +145,7 @@ const Testimonials = () => {
                       {testimonial.name}
                     </h4>
                     <p className='text-gray-400 text-xs'>{testimonial.role}</p>
-                    <p className='text-blue-400 text-xs'>
+                    <p className='text-primary-400 text-xs'>
                       {testimonial.company}
                     </p>
                   </div>
@@ -155,7 +155,7 @@ const Testimonials = () => {
                   href={testimonial.linkedinUrl}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-gray-400 hover:text-blue-400 transition-colors duration-200'
+                  className='text-gray-400 hover:text-primary-400 transition-colors duration-200'
                   title='View LinkedIn Profile'
                 >
                   <Linkedin size={20} />
@@ -168,7 +168,7 @@ const Testimonials = () => {
         {/* Call to Action */}
         <div className='text-center mt-16'>
           <div className='max-w-3xl mx-auto'>
-            <h3 className='text-2xl font-bold mb-4 text-blue-400'>
+            <h3 className='text-2xl font-bold mb-4 text-primary-400'>
               Ready to Work Together?
             </h3>
             <p className='text-gray-300 mb-8'>

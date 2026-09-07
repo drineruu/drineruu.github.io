@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code, Database, Globe, Server } from 'lucide-react';
-import Image from '../assets/images/20250608_091844.JPEG';
+import Image from '../assets/images/green_mountainer.JPEG';
 import ImageWithLoader from './ImageWithLoader';
 
 const About = () => {
@@ -28,7 +28,7 @@ const About = () => {
   ];
 
   return (
-    <section id='about' className='section-padding bg-gray-800/50'>
+    <section id='about' className='section-padding bg-surface-800/50'>
       <div className='container-width'>
         <div className='text-center mb-16'>
           <h2 className='text-3xl md:text-4xl font-bold mb-4'>About Me</h2>
@@ -43,7 +43,7 @@ const About = () => {
                 src={Image}
                 alt='Driner - Full Stack Developer'
                 className='w-full h-full'
-                imgClassName='object-cover rounded-2xl shadow-xl border-4 border-blue-500/20'
+                imgClassName='object-cover rounded-2xl shadow-xl border-4 border-primary-500/20'
                 onError={e => {
                   console.error('Image failed to load:', e.target.src);
                 }}
@@ -52,13 +52,13 @@ const About = () => {
           </div>
 
           <div className='order-1 lg:order-2'>
-            <h3 className='text-2xl font-bold mb-6 text-blue-400'>
+            <h3 className='text-2xl font-bold mb-6 text-primary-400'>
               Professional Bio
             </h3>
             <div className='space-y-6 text-gray-300'>
               <p>
                 My name is{' '}
-                <span className='text-blue-400'>John Driner Familaran</span>.
+                <span className='text-primary-400'>John Driner Familaran</span>.
                 I'm a passionate Full Stack Software Engineer with over 3 years
                 of experience in building scalable web applications and creating
                 exceptional user experiences.
@@ -78,7 +78,7 @@ const About = () => {
             </div>
 
             <div className='mt-8'>
-              <h4 className='text-xl font-semibold mb-4 text-blue-400'>
+              <h4 className='text-xl font-semibold mb-4 text-primary-400'>
                 My Goals & Interests
               </h4>
               <ul className='space-y-2 text-gray-300'>
@@ -94,7 +94,7 @@ const About = () => {
 
         {/* Current Tech Stack */}
         <div className='mt-20'>
-          <h3 className='text-2xl font-bold text-center mb-12 text-blue-400'>
+          <h3 className='text-2xl font-bold text-center mb-12 text-primary-400'>
             Current Tech Stack
           </h3>
           <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-6'>
@@ -103,7 +103,7 @@ const About = () => {
                 key={index}
                 className='card p-6 text-center hover:scale-105 transition-transform duration-300'
               >
-                <div className='text-blue-400 mb-4 flex justify-center'>
+                <div className='text-primary-400 mb-4 flex justify-center'>
                   {item.icon}
                 </div>
                 <h4 className='text-lg font-semibold mb-2'>{item.name}</h4>
