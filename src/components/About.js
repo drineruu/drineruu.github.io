@@ -41,7 +41,7 @@ const About = () => {
             <div className='w-96 mx-auto'>
               <ImageWithLoader
                 src={Image}
-                alt='Driner - Full Stack Developer'
+                alt='John Driner Familaran, Software Engineer from Baguio City, Philippines'
                 className='w-full h-full'
                 imgClassName='object-cover rounded-2xl shadow-xl border-4 border-primary-500/20'
                 onError={e => {

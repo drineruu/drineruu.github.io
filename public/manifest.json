@@ -1,6 +1,8 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Driner",
+  "name": "John Driner Familaran — Software Engineer Portfolio",
+  "description": "Portfolio of John Driner Familaran (Driner), a Software Engineer from Baguio City, Philippines.",
+  "lang": "en",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,7 +12,8 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo512.png",
@@ -19,7 +22,8 @@
     }
   ],
   "start_url": ".",
+  "scope": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#355e3b",
+  "background_color": "#121a16"
 }

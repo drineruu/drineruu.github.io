@@ -2,67 +2,140 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#1f2937" />
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Software Engineer portfolio showcasing modern web applications, React projects, and technical expertise." />
-    <meta name="keywords" content="Full Stack Developer, React, JavaScript, Portfolio, Web Developer, Frontend, Backend, Node.js, PHP, Python, Laravel, Vue.js, Tailwind CSS, Bootstrap, MySQL, Docker, Redis" />
+    <meta name="theme-color" content="#121a16" />
+
+    <title>John Driner Familaran (Driner) — Software Engineer | Laravel, Vue & React Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of John Driner Familaran (Driner), a Software Engineer from Baguio City, Philippines. Full stack work with Laravel, PHP, Vue.js, React, MySQL, and Google Workspace automation."
+    />
     <meta name="author" content="John Driner Familaran" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Driner - Full Stack Developer Portfolio" />
-    <meta property="og:description" content="Passionate Software Engineer creating innovative web solutions and exceptional user experiences. Explore my projects and skills." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://drineruu.github.io/portfolio-app" />
-    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Driner - Full Stack Developer Portfolio" />
-    <meta name="twitter:description" content="Passionate Software Engineer creating innovative web solutions and exceptional user experiences." />
-    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
-    <meta name="twitter:creator" content="@drineruu" />
-    
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://drineruu.github.io/" />
+
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Driner - Software Engineer</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Driner's Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://drineruu.github.io/" />
+    <meta property="og:title" content="John Driner Familaran (Driner) — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software Engineer from Baguio City, Philippines. I build scalable web applications and backend systems with Laravel, Vue.js, React, and Google Workspace automation."
+    />
+    <meta property="og:image" content="https://drineruu.github.io/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="John Driner Familaran — Software Engineer portfolio" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="John Driner Familaran (Driner) — Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Software Engineer from Baguio City, Philippines. Laravel, Vue.js, React, and Google Workspace automation."
+    />
+    <meta name="twitter:image" content="https://drineruu.github.io/og-image.jpg" />
+    <meta name="twitter:creator" content="@drineruu" />
+
+    <!-- Structured data: helps search engines build a knowledge panel / rich result -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://drineruu.github.io/#person",
+            "name": "John Driner Familaran",
+            "alternateName": "Driner",
+            "url": "https://drineruu.github.io/",
+            "image": "https://drineruu.github.io/og-image.jpg",
+            "email": "mailto:jnerfamilaran@gmail.com",
+            "jobTitle": "Software Engineer",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "YNS Philippines Inc."
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "University of Baguio"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Baguio City",
+              "addressCountry": "PH"
+            },
+            "knowsAbout": [
+              "Laravel",
+              "PHP",
+              "Vue.js",
+              "React",
+              "JavaScript",
+              "MySQL",
+              "REST APIs",
+              "Docker",
+              "Google Apps Script",
+              "Workflow automation"
+            ],
+            "sameAs": [
+              "https://github.com/drineruu",
+              "https://linkedin.com/in/jnerfamilaran",
+              "https://www.instagram.com/dri.ner/",
+              "https://ko-fi.com/drineruu"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://drineruu.github.io/#website",
+            "url": "https://drineruu.github.io/",
+            "name": "Driner's Portfolio",
+            "description": "Portfolio of John Driner Familaran, Software Engineer.",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://drineruu.github.io/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://drineruu.github.io/#profilepage",
+            "url": "https://drineruu.github.io/",
+            "name": "John Driner Familaran — Software Engineer Portfolio",
+            "isPartOf": { "@id": "https://drineruu.github.io/#website" },
+            "about": { "@id": "https://drineruu.github.io/#person" }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSJ661LVLW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SSJ661LVLW');
+    </script>
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSJ661LVLW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-SSJ661LVLW');
-  </script>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <h1>John Driner Familaran (Driner) — Software Engineer</h1>
+      <p>
+        Software Engineer based in Baguio City, Philippines, building scalable
+        web applications and backend systems with Laravel, PHP, Vue.js, React,
+        MySQL, and Google Workspace automation.
+      </p>
+      <p>
+        This portfolio needs JavaScript enabled. You can still reach me at
+        <a href="mailto:jnerfamilaran@gmail.com">jnerfamilaran@gmail.com</a> or
+        view my work on
+        <a href="https://github.com/drineruu">GitHub</a> and
+        <a href="https://linkedin.com/in/jnerfamilaran">LinkedIn</a>.
+      </p>
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

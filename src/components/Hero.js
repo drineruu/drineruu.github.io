@@ -146,6 +146,11 @@ const Hero = () => {
             <div className='flex-1 text-center lg:text-left'>
               <h1 className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-primary-300 bg-clip-text text-transparent'>
                 Hi, I'm Driner
+                <span className='sr-only'>
+                  {' '}
+                  — John Driner Familaran, Software Engineer based in Baguio
+                  City, Philippines
+                </span>
               </h1>
 
               <p className='text-xl md:text-2xl text-gray-300 mb-6'>
@@ -192,7 +197,8 @@ const Hero = () => {
                 <a
                   href='https://github.com/drineruu'
                   target='_blank'
-                  rel='noopener noreferrer'
+                  rel='noopener noreferrer me'
+                  aria-label='GitHub profile of John Driner Familaran'
                   className='text-gray-400 hover:text-white transition-colors duration-200'
                 >
                   <Github size={24} />
@@ -200,7 +206,8 @@ const Hero = () => {
                 <a
                   href='https://linkedin.com/in/jnerfamilaran'
                   target='_blank'
-                  rel='noopener noreferrer'
+                  rel='noopener noreferrer me'
+                  aria-label='LinkedIn profile of John Driner Familaran'
                   className='text-gray-400 hover:text-white transition-colors duration-200'
                 >
                   <Linkedin size={24} />
@@ -208,7 +215,8 @@ const Hero = () => {
                 <a
                   href='https://www.instagram.com/dri.ner/'
                   target='_blank'
-                  rel='noopener noreferrer'
+                  rel='noopener noreferrer me'
+                  aria-label='Instagram profile of John Driner Familaran'
                   className='text-gray-400 hover:text-white transition-colors duration-200'
                 >
                   <Instagram size={24} />
@@ -225,7 +233,7 @@ const Hero = () => {
                     <div className='flip-front'>
                       <ImageWithLoader
                         src={profileImage}
-                        alt='Driner - Profile Front'
+                        alt='Illustrated avatar of John Driner Familaran, Software Engineer'
                         className='w-full h-full'
                         imgClassName='rounded-full'
                         onError={e => {
@@ -240,7 +248,7 @@ const Hero = () => {
                     <div className='flip-back'>
                       <ImageWithLoader
                         src={profileImage2}
-                        alt='Driner - Profile Back'
+                        alt='Alternate illustrated avatar of John Driner Familaran'
                         className='w-full h-full'
                         imgClassName='rounded-full'
                         onError={e => {
