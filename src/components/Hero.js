@@ -1,10 +1,8 @@
 import React from 'react';
-import { ChevronDown, Github, Linkedin, Instagram } from 'lucide-react';
-import profileImage from '../assets/optimized-images/driner-chibi/driner-chibi-medium.webp';
-import profileImage2 from '../assets/optimized-images/driner-box/driner-box-medium.webp';
+import { ChevronsDown, Github, Linkedin, Instagram } from 'lucide-react';
+import profileImage from '../assets/images/admiral_driner_no-bg.png';
 import Typewriter from 'typewriter-effect';
 import { codeSnippets } from '../data/codeSnippets';
-import ImageWithLoader from './ImageWithLoader';
 
 /** Left → right: softer behind headline, stronger toward the avatar / right side */
 const codeBackgroundMask = {
@@ -27,7 +25,7 @@ const Hero = () => {
   return (
     <section
       id='hero'
-      className='min-h-screen flex items-center justify-center relative overflow-hidden'
+      className='relative min-h-screen overflow-hidden flex items-center justify-center bg-surface-900'
     >
       {/* Animated Code Background */}
       <div
@@ -77,7 +75,12 @@ const Hero = () => {
                   animationDuration: `${12 + Math.random() * 8}s`,
                 }}
               >
-                {snippet}
+                <span
+                  className='code-glitch'
+                  style={{ animationDelay: `${Math.random() * 2.2}s` }}
+                >
+                  {snippet}
+                </span>
               </div>
             );
           })}
@@ -131,21 +134,29 @@ const Hero = () => {
                   animationDuration: `${20 + Math.random() * 10}s`,
                 }}
               >
-                {snippet}
+                <span
+                  className='code-glitch'
+                  style={{ animationDelay: `${Math.random() * 2.2}s` }}
+                >
+                  {snippet}
+                </span>
               </div>
             );
           })}
         </div>
       </div>
 
-      <div className='container-width section-padding relative z-10'>
-        <div className='animate-fade-in'>
-          {/* Main Content - Two Column Layout */}
-          <div className='flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 max-w-6xl mx-auto'>
+      <div className='container-width section-padding relative z-10 h-full flex items-center'>
+        <div className='animate-fade-in w-full'>
+          <div className='flex flex-col lg:flex-row items-center lg:items-center justify-center gap-8 lg:gap-16 max-w-6xl mx-auto'>
             {/* Left Column - Text Content */}
-            <div className='flex-1 text-center lg:text-left'>
-              <h1 className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-primary-300 bg-clip-text text-transparent'>
-                Hi, I'm Driner
+            <div className='flex-1 text-center lg:text-left relative z-20'>
+              <h1 className='mb-6 text-4xl md:text-6xl font-bold'>
+                <span className='glitch' data-text="Hi, I'm Driner">
+                  <span className='glitch__main bg-gradient-to-r from-primary-400 to-primary-300 bg-clip-text text-transparent'>
+                    Hi, I'm Driner
+                  </span>
+                </span>
                 <span className='sr-only'>
                   {' '}
                   — John Driner Familaran, Software Engineer based in Baguio
@@ -224,56 +235,42 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Right Column - Profile Image with Flip Animation */}
-            <div className='flex-shrink-0 order-first lg:order-last'>
-              <div className='w-64 h-64 lg:w-80 lg:h-80 relative'>
-                <div className='absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-700 rounded-full p-1 flip-container'>
-                  <div className='flip-inner bg-surface-900 rounded-full'>
-                    {/* Front face */}
-                    <div className='flip-front'>
-                      <ImageWithLoader
-                        src={profileImage}
-                        alt='Illustrated avatar of John Driner Familaran, Software Engineer'
-                        className='w-full h-full'
-                        imgClassName='rounded-full'
-                        onError={e => {
-                          console.error(
-                            'Front image failed to load:',
-                            e.target.src
-                          );
-                        }}
-                      />
-                    </div>
-                    {/* Back face */}
-                    <div className='flip-back'>
-                      <ImageWithLoader
-                        src={profileImage2}
-                        alt='Alternate illustrated avatar of John Driner Familaran'
-                        className='w-full h-full'
-                        imgClassName='rounded-full'
-                        onError={e => {
-                          console.error(
-                            'Back image failed to load, using fallback:',
-                            e.target.src
-                          );
-                          e.target.src = profileImage;
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* Mobile / tablet portrait */}
+            <div className='lg:hidden flex-shrink-0 order-first flex justify-center'>
+              <img
+                src={profileImage}
+                alt='Illustrated portrait of John Driner Familaran, Software Engineer'
+                className='hero-portrait-outline h-[48vh] w-auto max-w-[85vw] object-contain select-none'
+                draggable={false}
+              />
             </div>
+
+            {/* Desktop spacer so text doesn't sit under the absolute portrait */}
+            <div
+              className='hidden lg:block flex-shrink-0 w-[min(42vw,28rem)]'
+              aria-hidden='true'
+            />
           </div>
         </div>
+      </div>
+
+      {/* Desktop portrait — enlarged, bottom flush with hero */}
+      <div className='hidden lg:flex absolute bottom-0 right-16 xl:right-28 2xl:right-64 z-10 pointer-events-none items-end'>
+        <img
+          src={profileImage}
+          alt='Illustrated portrait of John Driner Familaran, Software Engineer'
+          className='hero-portrait-outline h-[min(92vh,820px)] w-auto max-w-[min(48vw,560px)] object-contain object-bottom select-none'
+          draggable={false}
+        />
       </div>
 
       {/* Scroll indicator */}
       <button
         onClick={scrollToAbout}
-        className='absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-white transition-colors duration-200 animate-bounce relative z-10'
+        className='absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-400 hover:text-white transition-colors duration-200 animate-bounce z-20'
+        aria-label='Scroll to about section'
       >
-        <ChevronDown size={32} />
+        <ChevronsDown size={32} />
       </button>
     </section>
   );

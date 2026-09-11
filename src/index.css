@@ -62,7 +62,7 @@
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 50%;
+    border-radius: 9999px; /* pill / capsule */
     overflow: hidden;
   }
 
@@ -75,7 +75,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
+    object-position: top center;
+    border-radius: 9999px;
   }
 }
 
@@ -191,6 +192,192 @@
 .animate-float-vertical {
   animation: float-vertical linear infinite;
   opacity: 0; /* Ensure hidden by default */
+}
+
+/* Minimal hero title glitch — brief, infrequent RGB-style splits */
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch__main {
+  position: relative;
+  z-index: 1;
+  animation: glitch-main 6s infinite steps(1);
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  font: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
+.glitch::before {
+  color: #8fbc8f; /* sage */
+  animation: glitch-before 6s infinite linear;
+}
+
+.glitch::after {
+  color: #4f7942; /* fern */
+  animation: glitch-after 6s infinite linear;
+}
+
+@keyframes glitch-main {
+  0%,
+  89%,
+  93%,
+  100% {
+    transform: translate(0);
+  }
+  90% {
+    transform: translate(1px, -1px);
+  }
+  91% {
+    transform: translate(-1px, 1px);
+  }
+  92% {
+    transform: translate(1px, 0);
+  }
+}
+
+@keyframes glitch-before {
+  0%,
+  88%,
+  100% {
+    opacity: 0;
+    transform: translate(0);
+    clip-path: inset(0 0 100% 0);
+  }
+  89% {
+    opacity: 0.65;
+    transform: translate(-3px, 1px);
+    clip-path: inset(12% 0 58% 0);
+  }
+  90% {
+    opacity: 0.45;
+    transform: translate(2px, -1px);
+    clip-path: inset(42% 0 22% 0);
+  }
+  91% {
+    opacity: 0;
+    transform: translate(0);
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+@keyframes glitch-after {
+  0%,
+  90%,
+  100% {
+    opacity: 0;
+    transform: translate(0);
+    clip-path: inset(0 0 100% 0);
+  }
+  91.5% {
+    opacity: 0.55;
+    transform: translate(3px, -1px);
+    clip-path: inset(55% 0 12% 0);
+  }
+  92.5% {
+    opacity: 0.4;
+    transform: translate(-2px, 1px);
+    clip-path: inset(18% 0 48% 0);
+  }
+  93.5% {
+    opacity: 0;
+    transform: translate(0);
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glitch__main,
+  .glitch::before,
+  .glitch::after {
+    animation: none !important;
+  }
+
+  .code-glitch {
+    animation: none !important;
+  }
+}
+
+/* Silhouette outline for transparent hero portrait (follows PNG alpha) */
+/* Silhouette outline — single shade, thicker on the right with soft fade */
+.hero-portrait-outline {
+  filter:
+    /* even thin base (same shade) */ drop-shadow(0 1px 0 #004225)
+    drop-shadow(0 -1px 0 #004225) drop-shadow(-1px 0 0 #004225)
+    /* thicker on the right */ drop-shadow(1px 0 0 #004225)
+    drop-shadow(2px 0 0 #004225) drop-shadow(3px 0 0 #004225)
+    drop-shadow(4px 0 0 #004225) /* soft fade further right */
+    drop-shadow(6px 0 2px rgba(0, 66, 37, 0.55))
+    drop-shadow(10px 0 6px rgba(0, 66, 37, 0.3))
+    drop-shadow(16px 0 12px rgba(0, 66, 37, 0.12));
+}
+
+/* Frequent, light glitch for floating background code snippets */
+.code-glitch {
+  display: inline-block;
+  animation: code-glitch 2.2s infinite steps(1);
+  will-change: transform, text-shadow;
+}
+
+@keyframes code-glitch {
+  0%,
+  72%,
+  100% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+  74% {
+    transform: translate(1px, -1px);
+    text-shadow:
+      -2px 0 #8fbc8f,
+      2px 0 #4f7942;
+  }
+  76% {
+    transform: translate(-2px, 1px);
+    text-shadow:
+      2px 0 #7da86a,
+      -2px 0 #355e3b;
+  }
+  78% {
+    transform: translate(1px, 0);
+    text-shadow:
+      -1px 0 #8fbc8f,
+      1px 0 #4f7942;
+  }
+  80% {
+    transform: translate(0);
+    text-shadow: none;
+  }
+  88% {
+    transform: translate(-1px, 1px);
+    text-shadow:
+      2px 0 #4f7942,
+      -1px 0 #8fbc8f;
+  }
+  90% {
+    transform: translate(1px, -1px);
+    text-shadow:
+      -2px 0 #7da86a,
+      1px 0 #355e3b;
+  }
+  92% {
+    transform: translate(0);
+    text-shadow: none;
+  }
 }
 
 /* Custom scrollbar */
