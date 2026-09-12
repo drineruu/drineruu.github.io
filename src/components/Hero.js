@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section
       id='hero'
-      className='relative min-h-screen overflow-hidden flex items-center justify-center bg-surface-900'
+      className='relative min-h-svh overflow-hidden flex flex-col lg:flex-row lg:items-center justify-center bg-surface-900'
     >
       {/* Animated Code Background */}
       <div
@@ -146,12 +146,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className='container-width section-padding relative z-10 h-full flex items-center'>
-        <div className='animate-fade-in w-full'>
-          <div className='flex flex-col lg:flex-row items-center lg:items-center justify-center gap-8 lg:gap-16 max-w-6xl mx-auto'>
+      <div className='container-width relative z-10 w-full flex-1 flex flex-col lg:flex-row lg:items-center px-4 sm:px-6 lg:px-8 pt-24 pb-16 lg:py-24'>
+        <div className='animate-fade-in w-full flex-1 flex flex-col'>
+          <div className='flex flex-col lg:flex-row items-center lg:items-center justify-center gap-4 lg:gap-16 max-w-6xl mx-auto flex-1 w-full'>
             {/* Left Column - Text Content */}
-            <div className='flex-1 text-center lg:text-left relative z-20'>
-              <h1 className='mb-6 text-4xl md:text-6xl font-bold'>
+            <div className='flex-1 text-center lg:text-left relative z-20 rounded-2xl px-3 py-2 sm:px-4 lg:p-0 w-full flex flex-col min-h-0'>
+              <h1 className='mb-3 lg:mb-6 text-4xl md:text-6xl font-bold'>
                 <span className='glitch' data-text="Hi, I'm Driner">
                   <span className='glitch__main bg-gradient-to-r from-primary-400 to-primary-300 bg-clip-text text-transparent'>
                     Hi, I'm Driner
@@ -164,11 +164,11 @@ const Hero = () => {
                 </span>
               </h1>
 
-              <p className='text-xl md:text-2xl text-gray-300 mb-6'>
-                Software Engineer
+              <p className='text-xl md:text-2xl text-gray-200 mb-3 lg:mb-6'>
+                Fullstack Software Engineer
               </p>
 
-              <div className='text-lg text-gray-400 mb-2 flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-2'>
+              <div className='text-lg text-gray-300 mb-4 lg:mb-2 flex flex-row flex-wrap justify-center lg:justify-start items-center gap-x-2'>
                 <span>Grabs a cup of coffee.</span>
                 <div className='text-primary-400 font-semibold'>
                   <Typewriter
@@ -184,20 +184,20 @@ const Hero = () => {
                 </div>
               </div>
 
-              <p className='text-md text-gray-400 mb-6 max-w-2xl lg:max-w-none'>
+              <p className='hidden lg:block text-md text-gray-300 mb-6 max-w-2xl mx-auto lg:mx-0 lg:max-w-none'>
                 I'm passionate about building scalable web applications and
                 robust backend systems, optimizing performance, and ensuring
                 everything runs like clockwork.
               </p>
 
-              <div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8'>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-4 lg:mb-8'>
                 <button
                   onClick={() =>
                     document
                       .querySelector('#projects')
                       .scrollIntoView({ behavior: 'smooth' })
                   }
-                  className='btn-primary px-8 py-3 text-lg'
+                  className='btn-primary px-8 py-3 text-lg shadow-lg shadow-primary-900/40'
                 >
                   View My Work
                 </button>
@@ -210,7 +210,7 @@ const Hero = () => {
                   target='_blank'
                   rel='noopener noreferrer me'
                   aria-label='GitHub profile of John Driner Familaran'
-                  className='text-gray-400 hover:text-white transition-colors duration-200'
+                  className='text-gray-300 hover:text-white transition-colors duration-200'
                 >
                   <Github size={24} />
                 </a>
@@ -219,7 +219,7 @@ const Hero = () => {
                   target='_blank'
                   rel='noopener noreferrer me'
                   aria-label='LinkedIn profile of John Driner Familaran'
-                  className='text-gray-400 hover:text-white transition-colors duration-200'
+                  className='text-gray-300 hover:text-white transition-colors duration-200'
                 >
                   <Linkedin size={24} />
                 </a>
@@ -228,26 +228,34 @@ const Hero = () => {
                   target='_blank'
                   rel='noopener noreferrer me'
                   aria-label='Instagram profile of John Driner Familaran'
-                  className='text-gray-400 hover:text-white transition-colors duration-200'
+                  className='text-gray-300 hover:text-white transition-colors duration-200'
                 >
                   <Instagram size={24} />
                 </a>
               </div>
-            </div>
 
-            {/* Mobile / tablet portrait */}
-            <div className='lg:hidden flex-shrink-0 order-first flex justify-center'>
-              <img
-                src={profileImage}
-                alt='Illustrated portrait of John Driner Familaran, Software Engineer'
-                width={900}
-                height={1200}
-                className='hero-portrait-outline h-[48vh] w-auto max-w-[85vw] object-contain select-none'
-                draggable={false}
-                loading='eager'
-                fetchPriority='high'
-                decoding='async'
-              />
+              {/* Mobile / tablet portrait — fills leftover space, cropped to the face */}
+              <div className='lg:hidden relative flex-1 min-h-[240px] w-full mt-4 overflow-hidden flex items-end justify-center'>
+                <img
+                  src={profileImage}
+                  alt='Illustrated portrait of John Driner Familaran, Software Engineer'
+                  width={900}
+                  height={1200}
+                  className='hero-portrait-outline h-full w-full max-w-md object-cover object-[center_8%] select-none'
+                  draggable={false}
+                  loading='eager'
+                  fetchPriority='high'
+                  decoding='async'
+                />
+                <div
+                  className='absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-surface-900 to-transparent'
+                  aria-hidden='true'
+                />
+                <div
+                  className='absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-surface-900 to-transparent'
+                  aria-hidden='true'
+                />
+              </div>
             </div>
 
             {/* Desktop spacer so text doesn't sit under the absolute portrait */}
