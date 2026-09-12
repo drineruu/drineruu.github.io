@@ -310,20 +310,47 @@
   .code-glitch {
     animation: none !important;
   }
+
+  .hero-portrait-outline {
+    animation: none !important;
+  }
 }
 
-/* Silhouette outline for transparent hero portrait (follows PNG alpha) */
-/* Silhouette outline — single shade, thicker on the right with soft fade */
+/* Silhouette outline — thin even line + occasional glitch */
 .hero-portrait-outline {
-  filter:
-    /* even thin base (same shade) */ drop-shadow(0 1px 0 #004225)
-    drop-shadow(0 -1px 0 #004225) drop-shadow(-1px 0 0 #004225)
-    /* thicker on the right */ drop-shadow(1px 0 0 #004225)
-    drop-shadow(2px 0 0 #004225) drop-shadow(3px 0 0 #004225)
-    drop-shadow(4px 0 0 #004225) /* soft fade further right */
-    drop-shadow(6px 0 2px rgba(0, 66, 37, 0.55))
-    drop-shadow(10px 0 6px rgba(0, 66, 37, 0.3))
-    drop-shadow(16px 0 12px rgba(0, 66, 37, 0.12));
+  --hero-outline: drop-shadow(1px 0 0 #004225) drop-shadow(-1px 0 0 #004225)
+    drop-shadow(0 1px 0 #004225) drop-shadow(0 -1px 0 #004225);
+  filter: var(--hero-outline);
+  animation: hero-portrait-glitch 4.5s infinite steps(1);
+  will-change: transform, filter;
+}
+
+@keyframes hero-portrait-glitch {
+  0%,
+  86%,
+  100% {
+    transform: translate(0);
+    filter: var(--hero-outline);
+  }
+  88% {
+    transform: translate(2px, -1px);
+    filter: drop-shadow(-3px 0 0 #004225) drop-shadow(3px 0 0 #004225)
+      drop-shadow(0 1px 0 #004225) drop-shadow(0 -1px 0 #004225);
+  }
+  90% {
+    transform: translate(-2px, 1px);
+    filter: drop-shadow(4px 0 0 #004225) drop-shadow(-2px 0 0 #004225)
+      drop-shadow(0 -2px 0 #004225) drop-shadow(0 1px 0 #004225);
+  }
+  92% {
+    transform: translate(1px, 0);
+    filter: drop-shadow(-1px 0 0 #004225) drop-shadow(2px 0 0 #004225)
+      drop-shadow(0 2px 0 #004225) drop-shadow(0 -1px 0 #004225);
+  }
+  94% {
+    transform: translate(0);
+    filter: var(--hero-outline);
+  }
 }
 
 /* Frequent, light glitch for floating background code snippets */

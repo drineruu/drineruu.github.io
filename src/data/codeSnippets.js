@@ -27,8 +27,8 @@ export const codeSnippets = [
   '  await sleep(8);',
   '  return code();',
   '}',
-  'Kliiiirrrrrr',
-  'Kliiiirrrrrr?',
+  'drineru@drineru:~$: klir',
+  "Command 'Klir' not found, did you mean 'Clear'?",
 
   // React & Frontend
   'import React from "react";',

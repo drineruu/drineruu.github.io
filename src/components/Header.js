@@ -1,33 +1,92 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
+const navigation = [
+  { name: 'Home', href: '#hero' },
+  { name: 'About', href: '#about' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Resume', href: '#resume' },
+  { name: 'Contact', href: '#contact' },
+];
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('#hero');
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    let ticking = false;
 
-  const navigation = [
-    { name: 'Home', href: '#hero' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Resume', href: '#resume' },
-    { name: 'Contact', href: '#contact' },
-  ];
+    const updateActiveSection = () => {
+      // Match fixed header height so highlight tracks the section in view
+      const offset = 96;
+      let current = navigation[0].href;
+
+      for (const item of navigation) {
+        const el = document.querySelector(item.href);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top - offset <= 0) {
+          current = item.href;
+        }
+      }
+
+      // Near bottom of page → force Contact active
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 8;
+      if (atBottom) {
+        current = '#contact';
+      }
+
+      setActiveSection(current);
+      setScrolled(window.scrollY > 50);
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateActiveSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, []);
 
   const scrollToSection = href => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setActiveSection(href);
     setIsOpen(false);
+  };
+
+  const linkClass = (href, mobile = false) => {
+    const isActive = activeSection === href;
+    const base = mobile
+      ? 'block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200'
+      : 'px-3 py-2 text-sm font-medium transition-colors duration-200 border-b-2';
+
+    if (isActive) {
+      return `${base} ${
+        mobile
+          ? 'text-primary-400 bg-primary-500/10 rounded-md'
+          : 'text-primary-400 border-primary-400'
+      }`;
+    }
+
+    return `${base} ${
+      mobile
+        ? 'text-gray-300 hover:text-white'
+        : 'text-gray-300 hover:text-white border-transparent'
+    }`;
   };
 
   return (
@@ -38,7 +97,7 @@ const Header = () => {
           : 'bg-transparent'
       }`}
     >
-      <nav className='container-width'>
+      <nav className='container-width' aria-label='Primary'>
         <div className='flex items-center justify-between h-16'>
           <div className='flex-shrink-0'>
             <h1 className='ml-10 text-xl font-bold text-white'>
@@ -52,8 +111,12 @@ const Header = () => {
               {navigation.map(item => (
                 <button
                   key={item.name}
+                  type='button'
                   onClick={() => scrollToSection(item.href)}
-                  className='text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200'
+                  className={linkClass(item.href)}
+                  aria-current={
+                    activeSection === item.href ? 'page' : undefined
+                  }
                 >
                   {item.name}
                 </button>
@@ -64,8 +127,11 @@ const Header = () => {
           {/* Mobile menu button */}
           <div className='md:hidden'>
             <button
+              type='button'
               onClick={() => setIsOpen(!isOpen)}
               className='text-gray-300 hover:text-white p-2'
+              aria-expanded={isOpen}
+              aria-label='Toggle navigation menu'
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -79,8 +145,12 @@ const Header = () => {
               {navigation.map(item => (
                 <button
                   key={item.name}
+                  type='button'
                   onClick={() => scrollToSection(item.href)}
-                  className='text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left transition-colors duration-200'
+                  className={linkClass(item.href, true)}
+                  aria-current={
+                    activeSection === item.href ? 'page' : undefined
+                  }
                 >
                   {item.name}
                 </button>

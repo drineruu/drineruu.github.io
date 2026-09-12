@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronsDown, Github, Linkedin, Instagram } from 'lucide-react';
-import profileImage from '../assets/images/admiral_driner_no-bg.png';
+import profileImage from '../assets/optimized-images/admiral_driner/admiral_driner-medium.webp';
 import Typewriter from 'typewriter-effect';
 import { codeSnippets } from '../data/codeSnippets';
 
@@ -240,8 +240,13 @@ const Hero = () => {
               <img
                 src={profileImage}
                 alt='Illustrated portrait of John Driner Familaran, Software Engineer'
+                width={900}
+                height={1200}
                 className='hero-portrait-outline h-[48vh] w-auto max-w-[85vw] object-contain select-none'
                 draggable={false}
+                loading='eager'
+                fetchPriority='high'
+                decoding='async'
               />
             </div>
 
@@ -259,8 +264,13 @@ const Hero = () => {
         <img
           src={profileImage}
           alt='Illustrated portrait of John Driner Familaran, Software Engineer'
+          width={900}
+          height={1200}
           className='hero-portrait-outline h-[min(92vh,820px)] w-auto max-w-[min(48vw,560px)] object-contain object-bottom select-none'
           draggable={false}
+          loading='eager'
+          fetchPriority='high'
+          decoding='async'
         />
       </div>
 
