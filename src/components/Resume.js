@@ -9,11 +9,12 @@ const Resume = () => {
       location: 'Makati City, Philippines',
       period: 'June 2023 - Present',
       responsibilities: [
-        'Contributed to a large-scale project managing garbage collection, contracts, routes, employees, CO₂ emissions, and collection sites.',
-        'Skilled in full-stack development using Laravel, Vue.js, JavaScript, Python, MySQL, Node.js, phpMyAdmin, and Docker.',
-        'Built and maintained complex backend logic for route, site, employee, schedule, and contract management.',
-        'Improved code quality through active code reviews and regular performance optimizations.',
-        'Refactored legacy code to reduce execution time and streamline system processes.',
+        'Delivered multiple production systems for Japanese clients using Laravel, Vue.js, JavaScript, Python, MySQL, Node.js, and Docker.',
+        'Built a Japanese government garbage collection platform covering routes, vehicles, employees, collection schedules, and cleaning/maintenance plant locations.',
+        'Developed a related CO₂ emissions tracker with reports and daily batch jobs, and collapsed repetitive batch registration into a single configuration architecture.',
+        'Digitized Japanese real-estate contract workflows from paper to electronic—e-signatures, email notifications, and a legally compliant process flow.',
+        'Implemented a suit-order system with complex tailoring forms (jackets, slacks, skirts, vests), order batching, and summary generation; also built seminar management for organizations, subscriptions, and participant applications.',
+        'Hands-on QA alongside development: wrote and executed unit tests, proactively detected and reported bugs, and tightened quality through code reviews and performance refactors.',
       ],
     },
     {

@@ -9,6 +9,8 @@ import image4 from '../assets/optimized-images/IMG_9612/IMG_9612.webp';
 import image5 from '../assets/optimized-images/IMG_4986/IMG_4986.webp';
 import image6 from '../assets/optimized-images/IMG_5135/IMG_5135.webp';
 import artDriner from '../assets/images/carousel/art-driner.JPEG';
+import travelOcean from '../assets/images/20250608_091844.JPEG';
+import ministryJw from '../assets/images/IMG_8575.JPG';
 
 // Static images array (moved outside component to prevent re-creation)
 const images = [
@@ -18,6 +20,8 @@ const images = [
   { src: image4, alt: 'Driner - Professional Photo 4' },
   { src: image5, alt: 'Driner - Professional Photo 5' },
   { src: image6, alt: 'Driner - Professional Photo 6' },
+  { src: travelOcean, alt: 'Driner by the ocean while traveling' },
+  { src: ministryJw, alt: 'Driner visiting the JW.org branch' },
   { src: artDriner, alt: 'Driner - Original artwork' },
 ];
 

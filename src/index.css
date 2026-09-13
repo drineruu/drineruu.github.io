@@ -21,6 +21,23 @@
     @apply max-w-7xl mx-auto;
   }
 
+  /* Center leftover cards when the last row is odd */
+  .skill-category-card {
+    @apply w-full shrink-0;
+  }
+
+  @media (min-width: 768px) {
+    .skill-category-card {
+      width: calc(50% - 1rem);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .skill-category-card {
+      width: calc((100% - 4rem) / 3);
+    }
+  }
+
   .card {
     @apply bg-surface-800 rounded-lg shadow-lg border border-surface-600 transition-all duration-300 hover:border-surface-500 hover:shadow-xl;
   }

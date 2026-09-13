@@ -96,9 +96,9 @@ const Skills = () => {
           <p className='text-gray-400'>Technologies and tools I work with</p>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='flex flex-wrap justify-center gap-8'>
           {skillCategories.map((category, index) => (
-            <div key={index} className='card p-6'>
+            <div key={index} className='card skill-category-card p-6'>
               <div className='flex items-center mb-6'>
                 <div className='text-primary-400 mr-3'>{category.icon}</div>
                 <h3 className='text-xl font-bold'>{category.title}</h3>

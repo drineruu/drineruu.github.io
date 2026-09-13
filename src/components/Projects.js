@@ -15,31 +15,26 @@ const Projects = () => {
       image: projectImg('undraw_ai-document-analysis_1sq9.svg'),
       demoUrl: 'https://github.com/drineruu/driner-document-processing',
       githubUrl: 'https://github.com/drineruu/driner-document-processing',
-      challenges:
-        'This project is a web application that allows users to upload and process documents. It is built with Laravel and MySQL.',
     },
     {
       id: 2,
       title: 'UB Telecare',
       description:
-        'Telemedicine system with multiple user roles and video call functionalities',
+        'University of Baguio Medical Clinic Telemedicine System. Is a comprehensive telemedicine system with record management, appointment scheduling, notifications, and video call functionalities',
       technologies: ['Vue.js', 'Laravel', 'MySQL', 'WebRTC'],
       image: projectImg('undraw_medicine_hqqg.svg'),
       demoUrl: 'https://github.com/drineruu/ub-telecare',
       githubUrl: 'https://github.com/drineruu/ub-telecare',
-      challenges:
-        'This project is a telemedicine system with multiple user roles and video call functionalities. It is built with Vue.js and Laravel.',
     },
     {
       id: 3,
       title: 'Succulent Alpha Order Management System (SAOMS)',
-      description: 'A simple e-commerce system for succulent products',
+      description:
+        'A simple e-commerce system for managing succulent products inventory and order management',
       technologies: ['Laravel', 'MySQL', 'phpMyAdmin'],
       image: projectImg('undraw_plants_md5c.svg'),
       demoUrl: 'https://github.com/drineruu/saoms',
       githubUrl: 'https://github.com/drineruu/saoms',
-      challenges:
-        'This project is a simple e-commerce system for succulent products. It is built with Laravel and MySQL.',
     },
     {
       id: 4,
@@ -53,8 +48,6 @@ const Projects = () => {
         'Google Calendar',
       ],
       image: projectImg('undraw_calendar_8r6s.svg'),
-      challenges:
-        'Connecting Forms → Sheets → Calendar so each submission becomes a clean booking record and a calendar block without manual copy-paste, while keeping availability and stay dates accurate for the property.',
     },
   ];
 
@@ -98,7 +91,7 @@ const Projects = () => {
                 </p>
 
                 {/* Technologies */}
-                <div className='mb-4'>
+                <div className='mb-6'>
                   <div className='flex flex-wrap gap-2'>
                     {project.technologies.map((tech, index) => (
                       <span
@@ -109,14 +102,6 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                </div>
-
-                {/* Challenges */}
-                <div className='mb-6'>
-                  <h4 className='text-sm font-semibold text-gray-300 mb-2'>
-                    Key Challenge:
-                  </h4>
-                  <p className='text-xs text-gray-500'>{project.challenges}</p>
                 </div>
 
                 {/* Links */}

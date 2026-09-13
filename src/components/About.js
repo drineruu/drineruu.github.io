@@ -8,12 +8,12 @@ const About = () => {
     {
       icon: <Code size={24} />,
       name: 'Frontend',
-      tech: 'React, Vue.js, HTML5/CSS3',
+      tech: 'Vue.js, React, HTML5/CSS3',
     },
     {
       icon: <Server size={24} />,
       name: 'Backend',
-      tech: 'Node.js, PHP, Python',
+      tech: 'PHP and Laravel, Node.js, Python',
     },
     {
       icon: <Database size={24} />,
@@ -23,7 +23,7 @@ const About = () => {
     {
       icon: <Globe size={24} />,
       name: 'Tools',
-      tech: 'Git, Docker, AWS, Google Workspace',
+      tech: 'Git, Docker, AWS, Google Workspace and Microsoft Office Suite',
     },
   ];
 

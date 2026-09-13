@@ -101,7 +101,7 @@ const Header = () => {
         <div className='flex items-center justify-between h-16'>
           <div className='flex-shrink-0'>
             <h1 className='ml-10 text-xl font-bold text-white'>
-              <span className='text-primary-400'>DRY's</span>
+              Welcom to <span className='text-primary-400'>DRY's</span>
             </h1>
           </div>
 
